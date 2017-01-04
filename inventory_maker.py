@@ -14,7 +14,7 @@ conn = openstack_cloud()
 inventory_groups = ['web_server', 'app_server', 'db_server']
 openstack_inventory_groups = ['compute', 'scheduler', 'network', 'consoleauth']
 
-f = open('hosts', 'w')
+f = open('./hosts', 'w')
 
 instances = conn.list_servers()
 
