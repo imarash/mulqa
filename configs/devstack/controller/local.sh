@@ -87,9 +87,11 @@ if is_service_enabled nova; then
 
 
     ## Create the Web Stack
-    openstack stack create -t ~/tmp/hot/web-application/WebAppAutoScaling.yaml \
-        --parameter "ssh_key_name=mykey" \
-        --parameter "image_id=ubuntu-trusty-server" \
-        --parameter "public_network_id=public" \
-        autoscaleweb
+
+    openstack stack create -t ~/mulqa/usecases/3tier-web-application/WebAppAutoScaling.yaml \
+	--parameter "ssh_key_name=mykey" \
+	--parameter "image_id=ubuntu-trusty-server" \
+	--parameter "public_network_id=public" \
+	autoscaleweb
+
 fi
